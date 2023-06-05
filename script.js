@@ -11,5 +11,8 @@ var changemypic=function(){
         displaydata=data1;
         isdata1=true;
      }
-     doc.getElementById("myimage").src=displaydata.image;
+     document.getElementById("myimage").src=displaydata.image;
+     document.getElementById("para1").innerHTML=displaydata.name;
+     document.getElementById("para2").innerHTML=displaydata.designation;
+
 }
