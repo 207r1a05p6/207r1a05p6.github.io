@@ -1,6 +1,9 @@
+.container{
+    margin-left: 80px;
+}
 .card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width:30%;
+    width:51.5%;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -20,4 +23,8 @@
     font-style: italic;
     margin-top: 0;
     margin-bottom: 0;
+}
+.flip.toggle{
+  background-color: burlywood;
+  color:coral;
 }
