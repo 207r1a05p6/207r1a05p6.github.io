@@ -22,5 +22,18 @@ function showweatherReport(weather){
     let temperature=document.getElementById('temp');
     temperature.innerHTML='${Math.round(weather.main.temp)}&deg;C';
     let minMaxTemp=document.getElementById('min-max');
-    minMaxTemp.innerHTML='${Math.floor(weather.main.temp_min)}&deg;C';
+    minMaxTemp.innerHTML='${Math.floor(weather.main.temp_min)}&deg;C (min)/ ${Math.ceil(weather.main.temp_max)}';
+
+    let weatherType=document.getElementById('weather');
+    weatherType.innerText='${weather.weather[0].main}';
+}
+
+function dateManage(dateArg){
+    let days= ["Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday"];
+    let months=["January" , "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November" , "December"];
+    let year=dateArg.getFullYear();
+    let month=months[dateArg.getMonth()];
+    let date=dateArg.getDate();
+    let day=days[dateArg.getDay()];
+    return '${date} ${month} (${day}), ${year}';
 }
