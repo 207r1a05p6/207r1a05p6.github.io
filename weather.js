@@ -12,7 +12,7 @@ searchInputBox.addEventListener('keypress',(event)=>{
 });
 
 function getWeatherReport(city){
-    fetch(`$(weatherApi.BaseUrl)?q =${city}&appid=${weatherApi.key}&units=metric`)
+    fetch(`$(weatherApi.BaseUrl)?q =${city}&appid=${weatherApi.Key}&units=metric`)
     .then(weather => {
         return weather.json();
     }).then(showweatherReport);
