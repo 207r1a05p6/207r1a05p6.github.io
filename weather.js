@@ -1,6 +1,6 @@
 const weatherApi={
     Key: "b5078df82bb2b670331f73c175bd13ae",
-    BaseUrl: "https://api.openweathermap.org/data/2.5/weather?"
+    BaseUrl: "https://api.openweathermap.org/data/2.5/weather?",
 }
 const searchInputBox=document.getElementById('input-box');
 searchInputBox.addEventListener('keypress',(event)=>{
@@ -12,7 +12,7 @@ searchInputBox.addEventListener('keypress',(event)=>{
 });
 
 function getWeatherReport(city){
-    fetch('$(weatherApi.BaseUrl)?q =${city}&appid=${weatherApi.key}')
+    fetch(`$(weatherApi.BaseUrl)?q =${city}&appid=${weatherApi.key}&units=metric`)
     .then(weather => {
         return weather.json();
     }).then(showweatherReport);
@@ -20,16 +20,17 @@ function getWeatherReport(city){
 function showweatherReport(weather){
     console.log(weather);
     let city=document.getElementById('city');
-    city.innerText='${weather.name},${weather.sys.country}';
+    city.innerText=`${weather.name},${weather.sys.country}`;
     let temperature=document.getElementById('temp');
-    temperature.innerHTML='${Math.round(weather.main.temp)}&deg;C';
+    temperature.innerHTML=`${Math.round(weather.main.temp)}&deg;C`;
     let minMaxTemp=document.getElementById('min-max');
-    minMaxTemp.innerHTML='${Math.floor(weather.main.temp_min)}&deg;C (min)/ ${Math.ceil(weather.main.temp_max)}';
+    minMaxTemp.innerHTML=`${Math.floor(weather.main.temp_min)}&deg;C (min)/ ${Math.ceil(weather.main.temp_max)}`;
 
     let weatherType=document.getElementById('weather');
-    weatherType.innerText='${weather.weather[0].main}';
+    weatherType.innerText=`${weather.weather[0].main}`;
+
     if(weatherType.textContent == 'Clear') {
-        document.body.style.backgroundImage = "url('istockphoto-162428248-612x612.jpg');
+        document.body.style.backgroundImage = "url('istockphoto-162428248-612x612.jpg')";
         
     } else if(weatherType.textContent == 'Clouds') {
 
@@ -61,5 +62,5 @@ function dateManage(dateArg){
     let month=months[dateArg.getMonth()];
     let date=dateArg.getDate();
     let day=days[dateArg.getDay()];
-    return '${date} ${month} (${day}), ${year}';
+    return `${date} ${month} (${day}), ${year}`;
 }
