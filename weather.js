@@ -28,6 +28,7 @@ function showweatherReport(weather){
 
     let weatherType=document.getElementById('weather');
     weatherType.innerText=`${weather.weather[0].main}`;
+    
     let date=document.getElementById('date');
     let todayDate=new Date();
     date.innerText=dateManage(todayDate);
@@ -41,7 +42,7 @@ function showweatherReport(weather){
         
     } else if(weatherType.textContent == 'Haze') {
 
-        document.body.style.backgroundImage = "url('BEST-SNOW-PLACES-IN-INDIA-FEATURE-compressed.jpg')";
+        document.body.style.backgroundImage = "url('images.jpg')";
         
     }     else if(weatherType.textContent == 'Rain') {
         
@@ -53,7 +54,7 @@ function showweatherReport(weather){
     
     } else if(weatherType.textContent == 'Thunderstorm') {
     
-        document.body.style.backgroundImage = "url('BEST-SNOW-PLACES-IN-INDIA-FEATURE-compressed.jpg')";
+        document.body.style.backgroundImage = "url('GettyImages-940296124-scaled.jpg')";
         
     } 
 }
