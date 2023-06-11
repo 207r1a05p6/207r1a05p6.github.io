@@ -26,6 +26,30 @@ function showweatherReport(weather){
 
     let weatherType=document.getElementById('weather');
     weatherType.innerText='${weather.weather[0].main}';
+    if(weatherType.textContent == 'Clear') {
+        document.body.style.backgroundImage = "url('istockphoto-162428248-612x612.jpg');
+        
+    } else if(weatherType.textContent == 'Clouds') {
+
+        document.body.style.backgroundImage = "url('clouds_from_above.jpg')";
+        
+    } else if(weatherType.textContent == 'Haze') {
+
+        document.body.style.backgroundImage = "url('BEST-SNOW-PLACES-IN-INDIA-FEATURE-compressed.jpg')";
+        
+    }     else if(weatherType.textContent == 'Rain') {
+        
+        document.body.style.backgroundImage = "url('desktop-wallpaper-rain-forest-rain-and-background-rain-for-your-mobile-tablet-explore-beautiful-rain-beautiful-rain-most-beautiful-rain-forest-rain-cute.jpg')";
+        
+    } else if(weatherType.textContent == 'Snow') {
+        
+        document.body.style.backgroundImage = "url('BEST-SNOW-PLACES-IN-INDIA-FEATURE-compressed.jpg')";
+    
+    } else if(weatherType.textContent == 'Thunderstorm') {
+    
+        document.body.style.backgroundImage = "url('BEST-SNOW-PLACES-IN-INDIA-FEATURE-compressed.jpg')";
+        
+    } 
 }
 
 function dateManage(dateArg){
