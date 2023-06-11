@@ -28,6 +28,9 @@ function showweatherReport(weather){
 
     let weatherType=document.getElementById('weather');
     weatherType.innerText=`${weather.weather[0].main}`;
+    let date=document.getElementById('date');
+    let todayDate=new Date();
+    date.innerText=dateManage(todayDate);
 
     if(weatherType.textContent == 'Clear') {
         document.body.style.backgroundImage = "url('istockphoto-162428248-612x612.jpg')";
