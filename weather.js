@@ -15,7 +15,7 @@ searchInputBox.addEventListener('keypress',(event)=>{
 });
 
 function getWeatherReport(city){
-    fetch(`$(weatherApi.BaseUrl)?q =${city}&weatherid=${Key}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=eb7a2d4a5a9b284fe54b7bb547238443&units=metric`)
     .then(weather => {
         return weather.json();
     }).then(showweatherReport);
