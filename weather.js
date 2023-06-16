@@ -1,8 +1,8 @@
 
 // https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=eb7a2d4a5a9b284fe54b7bb547238443&units=metric
 const weatherApi={
-    Key: "b5078df82bb2b670331f73c175bd13ae",
-    BaseUrl: "https://api.openweathermap.org/data/2.5/weather?",
+    Key: "eb7a2d4a5a9b284fe54b7bb547238443",
+    BaseUrl: "https://api.openweathermap.org/data/2.5/weather",
 }
 const searchInputBox=document.getElementById('input-box');
 
